@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
+import 'package:kamkor/core/app_icon/app_icon_cubit.dart';
 import 'package:kamkor/core/localization/locale_cubit.dart';
 import 'package:kamkor/core/network/dio_client.dart';
 import 'package:kamkor/core/router/app_router.dart';
@@ -70,7 +71,8 @@ Future<void> configureDependencies() async {
     ..registerLazySingleton<Dio>(() => DioClient.create(sl()))
     ..registerLazySingleton(() => AppRouter(AuthGuard(sl())))
     ..registerLazySingleton(LocaleCubit.new)
-    ..registerLazySingleton(ThemeCubit.new);
+    ..registerLazySingleton(ThemeCubit.new)
+    ..registerLazySingleton(AppIconCubit.new);
 
   // feature registrations
   _registerAuth();

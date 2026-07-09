@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Default (Russian) launcher labels. app_name is the real name; the icon_*
+     strings are the names shown under each disguise icon on the home screen. -->
+<resources>
+    <string name="app_name">Kamkor</string>
+    <string name="icon_calculator">Калькулятор</string>
+    <string name="icon_notes">Заметки</string>
+    <string name="icon_weather">Погода</string>
+    <string name="icon_clock">Часы</string>
+    <string name="icon_calendar">Календарь</string>
+    <string name="icon_gallery">Галерея</string>
+</resources>

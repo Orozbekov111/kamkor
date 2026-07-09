@@ -39,6 +39,7 @@ dependencies:
     sdk: flutter
   flutter_bloc: ^9.1.1
   flutter_contacts: ^2.1.0
+  flutter_dynamic_icon_plus: ^1.4.1
   flutter_localizations:
     sdk: flutter
   flutter_secure_storage: ^10.3.1
@@ -77,6 +78,12 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+
+  # In-app previews for the app-icon picker (Profile → «Иконка приложения»).
+  # These are the tile thumbnails shown in the chooser; the real launcher icons
+  # live in the native iOS/Android projects (asset catalog / mipmaps).
+  assets:
+    - assets/app_icons/
 
   # Bundled Noto Sans (variable, wght 100–900) — full Kyrgyz Cyrillic
   # coverage (Ң Ү Ө). Static asset, never fetched over the network.

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Kyrgyz launcher labels for the disguise icons (used when the phone's
+     system language is Kyrgyz). -->
+<resources>
+    <string name="app_name">Kamkor</string>
+    <string name="icon_calculator">Эсептегич</string>
+    <string name="icon_notes">Жазмалар</string>
+    <string name="icon_weather">Аба ырайы</string>
+    <string name="icon_clock">Саат</string>
+    <string name="icon_calendar">Жылнаама</string>
+    <string name="icon_gallery">Галерея</string>
+</resources>

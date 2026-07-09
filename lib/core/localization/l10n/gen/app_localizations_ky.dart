@@ -502,6 +502,48 @@ class AppLocalizationsKy extends AppLocalizations {
   String get profile_theme => 'Көрүнүш';
 
   @override
+  String get profile_app_icon => 'Тиркеменин белгиси';
+
+  @override
+  String get profile_app_icon_hint =>
+      'Тиркемени телефондун экранында кадимки программа катары жашырыңыз.';
+
+  @override
+  String get profile_app_icon_android_hint =>
+      'Белги тиркемени жапкандан кийин өзгөрөт.';
+
+  @override
+  String get profile_app_icon_changed => 'Тиркеменин белгиси өзгөртүлдү';
+
+  @override
+  String get profile_app_icon_failed => 'Белгини өзгөртүү мүмкүн болбоду';
+
+  @override
+  String get profile_app_icon_unavailable =>
+      'Бул түзмөктө белгини өзгөртүү жеткиликсиз';
+
+  @override
+  String get app_icon_original => 'Түпнуска';
+
+  @override
+  String get app_icon_calculator => 'Эсептегич';
+
+  @override
+  String get app_icon_notes => 'Жазмалар';
+
+  @override
+  String get app_icon_weather => 'Аба ырайы';
+
+  @override
+  String get app_icon_clock => 'Саат';
+
+  @override
+  String get app_icon_calendar => 'Жылнаама';
+
+  @override
+  String get app_icon_gallery => 'Галерея';
+
+  @override
   String get theme_light => 'Ачык';
 
   @override

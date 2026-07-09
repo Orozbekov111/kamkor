@@ -499,6 +499,48 @@ class AppLocalizationsRu extends AppLocalizations {
   String get profile_theme => 'Оформление';
 
   @override
+  String get profile_app_icon => 'Иконка приложения';
+
+  @override
+  String get profile_app_icon_hint =>
+      'Замаскируйте приложение под обычную программу на экране телефона.';
+
+  @override
+  String get profile_app_icon_android_hint =>
+      'Иконка изменится после того, как вы закроете приложение.';
+
+  @override
+  String get profile_app_icon_changed => 'Иконка приложения изменена';
+
+  @override
+  String get profile_app_icon_failed => 'Не удалось изменить иконку';
+
+  @override
+  String get profile_app_icon_unavailable =>
+      'Смена иконки недоступна на этом устройстве';
+
+  @override
+  String get app_icon_original => 'Оригинал';
+
+  @override
+  String get app_icon_calculator => 'Калькулятор';
+
+  @override
+  String get app_icon_notes => 'Заметки';
+
+  @override
+  String get app_icon_weather => 'Погода';
+
+  @override
+  String get app_icon_clock => 'Часы';
+
+  @override
+  String get app_icon_calendar => 'Календарь';
+
+  @override
+  String get app_icon_gallery => 'Галерея';
+
+  @override
   String get theme_light => 'Светлая';
 
   @override

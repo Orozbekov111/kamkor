@@ -6,6 +6,70 @@
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
 	<string>Kamkor</string>
+	<!-- Alternate app icons for the in-app icon switcher (Profile →
+	     «Иконка приложения»). Files live loose in Runner/AppIcons and are
+	     copied to the bundle root (see project.pbxproj). The primary icon
+	     (Kamkor) stays in Assets.xcassets and is restored by passing null. -->
+	<key>CFBundleIcons</key>
+	<dict>
+		<key>CFBundleAlternateIcons</key>
+		<dict>
+			<key>calculator</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>calculator</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>notes</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>notes</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>weather</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>weather</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>clock</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>clock</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>calendar</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>calendar</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>gallery</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>gallery</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+		</dict>
+	</dict>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

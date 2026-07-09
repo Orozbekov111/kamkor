@@ -1022,6 +1022,84 @@ abstract class AppLocalizations {
   /// **'Көрүнүш'**
   String get profile_theme;
 
+  /// No description provided for @profile_app_icon.
+  ///
+  /// In ky, this message translates to:
+  /// **'Тиркеменин белгиси'**
+  String get profile_app_icon;
+
+  /// No description provided for @profile_app_icon_hint.
+  ///
+  /// In ky, this message translates to:
+  /// **'Тиркемени телефондун экранында кадимки программа катары жашырыңыз.'**
+  String get profile_app_icon_hint;
+
+  /// No description provided for @profile_app_icon_android_hint.
+  ///
+  /// In ky, this message translates to:
+  /// **'Белги тиркемени жапкандан кийин өзгөрөт.'**
+  String get profile_app_icon_android_hint;
+
+  /// No description provided for @profile_app_icon_changed.
+  ///
+  /// In ky, this message translates to:
+  /// **'Тиркеменин белгиси өзгөртүлдү'**
+  String get profile_app_icon_changed;
+
+  /// No description provided for @profile_app_icon_failed.
+  ///
+  /// In ky, this message translates to:
+  /// **'Белгини өзгөртүү мүмкүн болбоду'**
+  String get profile_app_icon_failed;
+
+  /// No description provided for @profile_app_icon_unavailable.
+  ///
+  /// In ky, this message translates to:
+  /// **'Бул түзмөктө белгини өзгөртүү жеткиликсиз'**
+  String get profile_app_icon_unavailable;
+
+  /// No description provided for @app_icon_original.
+  ///
+  /// In ky, this message translates to:
+  /// **'Түпнуска'**
+  String get app_icon_original;
+
+  /// No description provided for @app_icon_calculator.
+  ///
+  /// In ky, this message translates to:
+  /// **'Эсептегич'**
+  String get app_icon_calculator;
+
+  /// No description provided for @app_icon_notes.
+  ///
+  /// In ky, this message translates to:
+  /// **'Жазмалар'**
+  String get app_icon_notes;
+
+  /// No description provided for @app_icon_weather.
+  ///
+  /// In ky, this message translates to:
+  /// **'Аба ырайы'**
+  String get app_icon_weather;
+
+  /// No description provided for @app_icon_clock.
+  ///
+  /// In ky, this message translates to:
+  /// **'Саат'**
+  String get app_icon_clock;
+
+  /// No description provided for @app_icon_calendar.
+  ///
+  /// In ky, this message translates to:
+  /// **'Жылнаама'**
+  String get app_icon_calendar;
+
+  /// No description provided for @app_icon_gallery.
+  ///
+  /// In ky, this message translates to:
+  /// **'Галерея'**
+  String get app_icon_gallery;
+
   /// No description provided for @theme_light.
   ///
   /// In ky, this message translates to:

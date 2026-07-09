@@ -6,12 +6,22 @@
     <!-- Import a trusted contact from the device address book. -->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <application
-        android:label="kamkor"
+        android:label="@string/app_name"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+
+        <!-- Runtime app-icon switching (flutter_dynamic_icon_plus). On Android
+             the swap is applied when the task is removed from recents, so this
+             service must survive the task removal (stopWithTask=false) to run
+             its onTaskRemoved handler. -->
+        <service
+            android:name="com.solusibejo.flutter_dynamic_icon_plus.FlutterDynamicIconPlusService"
+            android:stopWithTask="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
+            android:enabled="true"
             android:launchMode="singleTop"
             android:taskAffinity=""
             android:theme="@style/LaunchTheme"
@@ -31,6 +41,110 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <!-- Alternate launcher icons. Each alias re-points the launcher at a
+             different icon + label and targets MainActivity. All start disabled;
+             the plugin enables the chosen one (and disables the rest) when the
+             app is closed. ".original" restores the real Kamkor icon (passing
+             null does not re-enable MainActivity on Android, so we need it). -->
+        <activity-alias
+            android:name=".original"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher"
+            android:roundIcon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".calculator"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_calculator"
+            android:roundIcon="@mipmap/ic_calculator"
+            android:label="@string/icon_calculator"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".notes"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_notes"
+            android:roundIcon="@mipmap/ic_notes"
+            android:label="@string/icon_notes"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".weather"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_weather"
+            android:roundIcon="@mipmap/ic_weather"
+            android:label="@string/icon_weather"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".clock"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_clock"
+            android:roundIcon="@mipmap/ic_clock"
+            android:label="@string/icon_clock"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".calendar"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_calendar"
+            android:roundIcon="@mipmap/ic_calendar"
+            android:label="@string/icon_calendar"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+            android:name=".gallery"
+            android:enabled="false"
+            android:exported="true"
+            android:icon="@mipmap/ic_gallery"
+            android:roundIcon="@mipmap/ic_gallery"
+            android:label="@string/icon_gallery"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
         <meta-data

@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:kamkor/core/app_icon/app_icon.dart';
+import 'package:kamkor/core/app_icon/app_icon_cubit.dart';
 import 'package:kamkor/core/di/injection.dart';
 import 'package:kamkor/core/localization/l10n/gen/app_localizations.dart';
 import 'package:kamkor/core/localization/locale_cubit.dart';
@@ -12,6 +14,7 @@ import 'package:kamkor/core/widgets/state_views/loading_view.dart';
 import 'package:kamkor/features/auth/domain/entities/user.dart';
 import 'package:kamkor/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:kamkor/features/profile/presentation/bloc/profile_bloc.dart';
+import 'package:kamkor/features/profile/presentation/widgets/app_icon_sheet.dart';
 import 'package:kamkor/features/profile/presentation/widgets/profile_edit_sheet.dart';
 
 /// Profile screen, laid out as a calm "settings" surface:
@@ -119,7 +122,9 @@ class ProfileView extends StatelessWidget {
                 ),
                 const SizedBox(height: AppSpacing.xl),
                 SectionHeader(l.profile_section_settings),
-                const CardGroup(rows: [_LanguageRow(), _ThemeRow()]),
+                const CardGroup(
+                  rows: [_LanguageRow(), _ThemeRow(), _AppIconRow()],
+                ),
                 const SizedBox(height: AppSpacing.xl),
                 CardGroup(
                   rows: [
@@ -311,6 +316,28 @@ class _ThemeRow extends StatelessWidget {
     ThemeMode.dark => l.theme_dark,
     ThemeMode.system => l.theme_system,
   };
+}
+
+/// App-icon row: shows the active launcher icon and opens the icon picker — the
+/// disguise feature that lets the app hide as an everyday utility (calculator,
+/// clock, …) on the home screen.
+class _AppIconRow extends StatelessWidget {
+  const _AppIconRow();
+
+  @override
+  Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context);
+    return BlocBuilder<AppIconCubit, AppIcon>(
+      builder: (context, icon) {
+        return AppTile(
+          icon: Icons.apps_outlined,
+          title: l.profile_app_icon,
+          value: appIconLabel(l, icon),
+          onTap: () => unawaited(showAppIconSheet(context)),
+        );
+      },
+    );
+  }
 }
 
 /// A calm bottom-sheet chooser: a titled list where the current value carries a
